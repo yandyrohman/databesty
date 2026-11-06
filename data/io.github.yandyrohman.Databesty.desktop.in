@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Databesty
+GenericName=Database Client
+Comment=Kelola database PostgreSQL, MySQL dan SQLite
+Exec=@EXEC@
+Icon=io.github.yandyrohman.Databesty
+Terminal=false
+Categories=Development;Database;GTK;
+Keywords=sql;database;postgres;postgresql;mysql;mariadb;sqlite;
+StartupNotify=true
+StartupWMClass=io.github.yandyrohman.Databesty

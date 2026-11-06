@@ -1,0 +1,98 @@
+/* badges & swatches -------------------------------------------------------- */
+.db-badge {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+  color: white;
+}
+.color-swatch {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px alpha(black, 0.12);
+}
+.color-swatch:checked {
+  box-shadow: 0 0 0 2px var(--window-bg-color), 0 0 0 4px var(--accent-color);
+}
+.swatch-blue   { background: #3584e4; }
+.swatch-teal   { background: #2190a4; }
+.swatch-green  { background: #3a944a; }
+.swatch-yellow { background: #c88800; }
+.swatch-orange { background: #ed5b00; }
+.swatch-red    { background: #e62d42; }
+.swatch-pink   { background: #d56199; }
+.swatch-purple { background: #9141ac; }
+.swatch-slate  { background: #6f8396; }
+
+.live-dot {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 999px;
+  background: #2ec27e;
+  margin: 0 2px;
+}
+.conn-more { opacity: 0.55; }
+row:hover .conn-more { opacity: 1; }
+
+.sidebar-section {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
+.sidebar-footer {
+  padding: 4px 6px 4px 14px;
+}
+
+/* table toolbar ------------------------------------------------------------- */
+.table-toolbar {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--view-bg-color);
+}
+.table-toolbar entry { min-height: 30px; }
+
+/* grid ---------------------------------------------------------------------- */
+columnview.data-grid {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+columnview.data-grid > header > button {
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  padding: 6px 8px;
+}
+columnview.data-grid > listview > row > cell {
+  padding: 3px 8px;
+}
+columnview.data-grid > listview > row:nth-child(even) {
+  background: alpha(currentColor, 0.025);
+}
+columnview.data-grid > listview > row:selected {
+  background: alpha(var(--accent-bg-color), 0.22);
+}
+.cell.null {
+  opacity: 0.4;
+  font-style: italic;
+}
+
+.null-toggle {
+  font-size: 0.78em;
+  font-weight: 700;
+  padding: 2px 8px;
+  min-height: 24px;
+}
+.null-toggle:checked {
+  background: alpha(var(--accent-bg-color), 0.25);
+  color: var(--accent-color);
+}
+
+.sql-editor {
+  font-size: 1.02em;
+}
