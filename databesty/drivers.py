@@ -210,6 +210,17 @@ class Driver:
                 return cur.fetchall()
             finally:
                 cur.close()
+                # psycopg2 and PyMySQL run with autocommit off, so a plain SELECT opens
+                # a transaction. Left open it sits "idle in transaction" holding read
+                # locks, which blocks other clients' ALTER TABLE / migrations forever.
+                # Reads change nothing, so ending the transaction here is safe.
+                self._end_read()
+
+    def _end_read(self):
+        try:
+            self.conn.rollback()
+        except Exception:  # noqa: BLE001 - a dead connection surfaces on the next call
+            pass
 
     def _write(self, sql, params=()):
         with self.lock:
